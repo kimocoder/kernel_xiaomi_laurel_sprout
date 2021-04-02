@@ -200,6 +200,7 @@ enum csr_roam_stats_classtypes {
 	eCsrMaxStats
 };
 
+#ifdef FEATURE_WLAN_DIAG_SUPPORT
 enum csr_diagwlan_status_eventsubtype {
 	eCSR_WLAN_STATUS_CONNECT = 0,
 	eCSR_WLAN_STATUS_DISCONNECT
@@ -217,6 +218,8 @@ enum csr_diagwlan_status_eventreason {
 	eCSR_REASON_ROAM_HO_FAIL,
 
 };
+
+#endif /* FEATURE_WLAN_DIAG_SUPPORT */
 
 struct csr_channel {
 	uint8_t numChannels;
@@ -1014,7 +1017,7 @@ struct csr_roam_session {
 	bool nss_forced_1x1;
 	bool disable_hi_rssi;
 	bool dhcp_done;
-	uint8_t disconnect_reason;
+	tSirMacReasonCodes disconnect_reason;
 	uint8_t uapsd_mask;
 	struct scan_cmd_info scan_info;
 	qdf_mc_timer_t roaming_offload_timer;

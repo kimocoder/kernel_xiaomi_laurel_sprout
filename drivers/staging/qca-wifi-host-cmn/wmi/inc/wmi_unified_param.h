@@ -5734,6 +5734,7 @@ typedef enum {
 #endif
 	wmi_roam_stats_event_id,
 	wmi_roam_scan_chan_list_id,
+	wmi_vdev_bcn_latency_event_id,
 	wmi_events_max,
 } wmi_conv_event_id;
 
@@ -5998,6 +5999,7 @@ typedef enum {
 	wmi_vdev_param_set_ba_mode,
 	wmi_vdev_param_autorate_misc_cfg,
 	wmi_vdev_param_amsdu_subframe_size_per_ac,
+	wmi_vdev_param_nan_config_features,
 
 	wmi_vdev_param_max,
 } wmi_conv_vdev_param_id;

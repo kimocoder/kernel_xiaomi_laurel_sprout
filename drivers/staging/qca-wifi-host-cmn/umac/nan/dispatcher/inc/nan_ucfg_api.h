@@ -291,4 +291,3 @@ QDF_STATUS ucfg_nan_get_callbacks(struct wlan_objmgr_psoc *psoc,
  */
 bool ucfg_is_nan_allowed_on_chan(struct wlan_objmgr_pdev *pdev, uint32_t chan);
 #endif /* _NAN_UCFG_API_H_ */
-
